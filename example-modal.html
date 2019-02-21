@@ -40,7 +40,7 @@
                             <th scope="col">#</th>
                             <th scope="col" >Item</th>
                             <th scope="col" class="text-center">Volume</th>
-                            <th scope="col" class="text-center">Price (SGD)</th>
+                            <th scope="col" class="text-center">Price (USD)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -48,7 +48,7 @@
                             <th scope="row">1</th>
                             <td>Vivamus leo nibh</td>
                             <td class="text-center">1</td>
-                            <td class="text-right" style="padding-right: 20px">$0.01</td>
+                            <td class="text-right" style="padding-right: 20px">$0.02</td>
                         </tr>
                         <tr>
                             <th scope="row">2</th>
@@ -100,7 +100,7 @@
                     </li>
                     <li class="list-group-item d-flex justify-content-between">
                         <span>Total (SGD)</span>
-                        <strong id="totalAmount">$0.01</strong>
+                        <strong id="totalAmount">$0.02</strong>
                     </li>
                 </ul>
             
@@ -139,15 +139,15 @@
         el('pay').addEventListener('click', function (e) {
             e.preventDefault();
             e.stopPropagation();
-            RDP.auth('6jeincvnmi8hl0g9qaon3955un', 'dadem4qv49lts24v986f83h1kp4gbo7133cu2u40nlp5n80uvur')
+            RDP.auth('1sedrgc2rfa34ls7dnmpivl786', '1u8ct112p406rb1sqdmqpfqg14nrh3ekgc6olkl7lmlk5vph4h45')
             .then(res => {
                 console.log(res);
                 RDP.modal.pay(
                     res.accessToken,
                     el('paymentRef').innerText,
-                    '23eae7e7-4c37-4413-b73d-f379d0269b43', 
+                    '7a0cb443-157d-440a-8219-017951e8cf7c', 
                     el('totalAmount').innerText.substring(1),
-                    'SGD',
+                    'USD',
                     {}
                 )
                 .catch(e => {
