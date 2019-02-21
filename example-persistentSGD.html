@@ -10,11 +10,9 @@
     <link rel="stylesheet" type="text/css" media="screen,print" href="modal.loader2.css3.css">
     <title>Global Example Shopping: Checkout</title>
     <style type="text/css">
-
     h2, p.lead {
         text-align: left;
     }
-
     #payframe {
         border: 1px solid #eee;
         width: 100%;
@@ -31,25 +29,25 @@
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <ul class="list-group mb-3">                    
+                <ul class="list-group mb-3">
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                             <div>
                                 <small class="text-muted">1x gold utility belt</small>
                             </div>
-                            <span class="text-muted">$0.02</span>
+                            <span class="text-muted">$2.00</span>
                         </li>
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
                             <small class="text-muted">1x carbonweave parachute</small>
                         </div>
-                        <span class="text-muted">$2.00</span>
+                        <span class="text-muted">$0.01</span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
                             <h6 class="my-0">Total Cost</h6>
                             <small class="text-muted">Brief description</small>
                         </div>
-                        <span class="text-muted">$2.02</span>
+                        <span class="text-muted">$2.01</span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
@@ -83,7 +81,7 @@
                     </li>
                     <li class="list-group-item d-flex justify-content-between">
                         <span>Total (SGD)</span>
-                        <strong id="totalAmount">$2.02</strong>
+                        <strong id="totalAmount">$0.01</strong>
                     </li>
                 </ul>
             
@@ -124,13 +122,12 @@
         RDP.modal.init('modal.css3.css');
         let el = id => { return document.getElementById(id) };
         el('paymentRef').innerText = "OID" + (new Date()).getTime();
-
-        RDP.auth('2nsbvbgvqpfpgftsfpfo2r5p5i', 'ahbp2v9ql4bu8lv6njmfk59ibjq3j96d01lnflfh078orbnt6c5')
+        RDP.auth('6jeincvnmi8hl0g9qaon3955un', 'dadem4qv49lts24v986f83h1kp4gbo7133cu2u40nlp5n80uvur')
         .then(res => {
             RDP.pay(
                 res.accessToken,
                 el('paymentRef').innerText,
-                '97528909-7fc1-407b-aacd-2b301bbc49fb', 
+                '23eae7e7-4c37-4413-b73d-f379d0269b43', 
                 el('totalAmount').innerText.substring(1),
                 'SGD',
                 {}
