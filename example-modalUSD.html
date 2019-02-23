@@ -94,13 +94,13 @@
         el('pay').addEventListener('click', function (e) {
             e.preventDefault();
             e.stopPropagation();
-            RDP.auth('5uuqtt8563709mthdueglko7uj', '1h4sqmute3tbh5tcrjded65rv09q9finj0dhnpm4jmfsvcebge8')
+            RDP.auth('5j3b1f2mnj9thsqdscp3sqisim', '1ctvv656van7fi0u92ktadd5jb6svb3mhuttafrsnn1l9399poaf')
             .then(res => {
                 console.log(res);
                 RDP.modal.pay(
                     res.accessToken,
                     el('paymentRef').innerText,
-                    '7a0cb443-157d-440a-8219-017951e8cf7c', 
+                    '9bb3e21f-fedf-47c3-af01-031e3c2fb0ac', 
                     el('totalAmount').innerText.substring(1),
                     'SGD',
                     {}
