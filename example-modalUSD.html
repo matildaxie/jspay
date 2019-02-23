@@ -25,16 +25,30 @@
     </style>
   </head>
   <body>
-    <div class="container">
-        <div class="py-5 text-center">
-            <img class="d-block mx-auto mb-4" src="LOGO_PINK.png" alt="" height="72">
-            <h2>test card</h2>
-              <p class="lead">Card Number for successful&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4111&nbsp;&nbsp;&nbsp;1111&nbsp;&nbsp;&nbsp;1111&nbsp;&nbsp;&nbsp;1111&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expiry date: any future date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CVV: any 3 digits<br/>
-              Card Number for failed &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4532 0818 6469 8195&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expiry date: any future date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CVV: any 3 digits<br/>
-              Alipay&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alipaytest20091@gmail.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login Passcode: 111 111&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Payment Passcode: 111 111 <br/>
-          </p>
+    <div class="container">      
+        <div class="row">
             <div class="col-md-4">
                 <ul class="list-group mb-3">
+                      <li>visa successful 4111 1111 1111 1111 
+                        <br>expiry date: any future date 
+                        <br>cvv: any 3 digits
+                      </li>
+                      <li>visa fail 4532 0818 6469 8195
+                        <br>expiry date: any future date 
+                        <br>cvv: any 3 digits
+                      </li>
+                      <li>mastercard successful 5123 4567 8901 2346
+                        <br>expiry date: any future date 
+                        <br>cvv: any 3 digits
+                      </li>
+                      <li>mastercard fail 54601 7986 1854 077
+                        <br>expiry date: any future date 
+                        <br>cvv: any 3 digits
+                      </li>
+                      <li>User Email: alipaytest20091@gmail.com
+                        <br>Login Passcode: 111 111
+                        <br>Payment Passcode: 111 111
+                      </li>
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
                             <h6 class="my-0">Payment Reference</h6>
@@ -47,6 +61,15 @@
                         <strong id="totalAmount">$0.02</strong>
                     </li>
                 </ul>
+            
+                <form class="card p-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="promoCode" placeholder="Promo code">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-secondary">Redeem</button>
+                        </div>
+                    </div>
+                </form>
                 <hr class="mb-4"/>
                 <button type="button" class="btn btn-success btn-lg btn-block" id="pay">Pay</button> 
             </div>
