@@ -75,7 +75,7 @@
   <div class="form-group row">
     <label for="inputClientId" class="col- col-form-label">ClientId</label>
     <div class="col-">
-      <input type="text" class="form-control" id="inputClientId" placeholder="Merchant ID">
+      <input type="text" class="form-control" id="inputClientId" placeholder="Client ID">
     </div>
   </div>
   <div class="form-group row">
@@ -86,7 +86,8 @@
   </div>
 </form>
     </div>
-  </div>
+                    <div class="col-">
+
 
 
 
@@ -100,8 +101,16 @@
                         <span class="text-muted" id="paymentRef"></span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between">
-                        <span>Total (SGD)</span>
-                        <strong id="totalAmount">$0.02</strong>
+<form>
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="currency">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="totalAmount">
+    </div>
+  </div>
+</form>
                     </li>
                 <div>           
                 <button type="button" class="btn btn-success btn-lg btn-block" id="pay">Pay</button> 
@@ -121,15 +130,15 @@
         el('pay').addEventListener('click', function (e) {
             e.preventDefault();
             e.stopPropagation();
-            RDP.auth('5uuqtt8563709mthdueglko7uj', '1h4sqmute3tbh5tcrjded65rv09q9finj0dhnpm4jmfsvcebge8')
+            RDP.auth(el(‘inputClientId’).innerText.substring(1), el(‘inputSecret).innerText.substring(1))
             .then(res => {
                 console.log(res);
                 RDP.modal.pay(
                     res.accessToken,
                     el('paymentRef').innerText,
-                    '7a0cb443-157d-440a-8219-017951e8cf7c', 
+                    el(‘inputMerchantId).innerText.substring(1), 
                     el('totalAmount').innerText.substring(1),
-                    'SGD',
+                    el('currency').innerText.substring(1),
                     {}
                 )
                 .catch(e => {
