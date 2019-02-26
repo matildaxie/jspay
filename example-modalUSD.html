@@ -28,10 +28,10 @@
   <body>
     <div class="container">      
       <div class="py-5 text-center">
-        Test test
+        
       </div>
         <div class="row">
-            <div class="col-">
+            <div class="col-md-4">
                 <dl class="list-group mb-3">
                   <dt>visa successful</dt>
                        <dd>4111 1111 1111 1111 
@@ -64,35 +64,7 @@
                       </dd>
               </dl>
                   </div>
-                  <div class="col-">
-<form>
-  <div class="form-group row">
-    <label for="inputMerchantId" class="col- col-form-label">MerchantId</label>
-    <div class="col-">
-      <input type="text" class="form-control" id="inputMerchantId" placeholder="Merchant ID">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="inputClientId" class="col- col-form-label">ClientId</label>
-    <div class="col-">
-      <input type="text" class="form-control" id="inputClientId" placeholder="Client ID">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="inputSecret" class="col- col-form-label">Secret</label>
-    <div class="col-">
-      <input type="text" class="form-control" id="inputSecret" placeholder="Secret">
-    </div>
-  </div>
-</form>
-    </div>
-                    <div class="col-">
-
-
-
-
-
-
+                  <div class="col-md-4">
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
                             <h6 class="my-0">Payment Reference</h6>
@@ -102,7 +74,7 @@
                     </li>
                     <li class="list-group-item d-flex justify-content-between">
 <form>
-  <div class="row">
+  <div class="form-row">
     <div class="col">
       <input type="text" class="form-control" placeholder="currency">
     </div>
@@ -112,7 +84,7 @@
   </div>
 </form>
                     </li>
-                <div>           
+                </ul>           
                 <button type="button" class="btn btn-success btn-lg btn-block" id="pay">Pay</button> 
             </div>
         </div>
@@ -130,13 +102,13 @@
         el('pay').addEventListener('click', function (e) {
             e.preventDefault();
             e.stopPropagation();
-            RDP.auth(el(‘inputClientId’).innerText.substring(1), el(‘inputSecret).innerText.substring(1))
+            RDP.auth('5uuqtt8563709mthdueglko7uj', '1h4sqmute3tbh5tcrjded65rv09q9finj0dhnpm4jmfsvcebge8')
             .then(res => {
                 console.log(res);
                 RDP.modal.pay(
                     res.accessToken,
                     el('paymentRef').innerText,
-                    el(‘inputMerchantId).innerText.substring(1), 
+                    '7a0cb443-157d-440a-8219-017951e8cf7c', 
                     el('totalAmount').innerText.substring(1),
                     el('currency').innerText.substring(1),
                     {}
