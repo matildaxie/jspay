@@ -76,9 +76,9 @@
                         <span>Total (SGD)</span>
                         <strong id="totalAmount">$0.02</strong>
 <form>
-  <div class="row">
+  <div class="form-row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="currency">
+      <input type="text" class="form-control" id="currency" placeholder="currency">
     </div>
     <div class="col">
       <input type="text" class="form-control" placeholder="Last name">
@@ -112,7 +112,7 @@
                     res.accessToken,
                     el('paymentRef').innerText,
                     '7a0cb443-157d-440a-8219-017951e8cf7c', 
-                    el('totalAmount').innerText.substring(1),
+                    ‘0.02’,
                     el('currency').innerText.substring(1),
                     {}
                 )
