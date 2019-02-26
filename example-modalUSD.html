@@ -64,32 +64,28 @@
                       </dd>
               </dl>
                   </div>
-      </div>
-      <div class="col-md-4">
-      <form>
-                        <div class="form-group row">
-                          <label for="inputmerchantId" class="col-sm-4 col-form-label">merchantId</label>
-                          <div class="col-sm-8">
-                            <input type="text" class="form-control" id="inputmerchantId" placeholder="merchantId">
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label for="inputclientId" class="col-sm-4 col-form-label">clientId</label>
-                          <div class="col-sm-8">
-                            <input type="text" class="form-control" id="inputclientId" placeholder="clientId">
-                          </div>
-                            </div>
-                            <div class="form-group row">
-                          <label for="inputsecret" class="col-sm-4 col-form-label">secret</label>
-                          <div class="col-sm-8">
-                            <input type="text" class="form-control" id="inputsecret" placeholder="secret">
-                          </div>
-                          </div>
-                      </form>
-    </div>
-    </div>
                   <div class="col-md-4">
-                                           </div>
+                  <div class="col-md-4">
+<form>
+  <div class="form-group row">
+    <label for="inputMerchantID" class="col-sm-4 col-form-label">MerchantID</label>
+    <div class="col-sm-8">
+      <input type="email" class="form-control" id="inputMerchantID" placeholder="MerchantID">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputClientID" class="col-sm-4 col-form-label">ClientID</label>
+    <div class="col-sm-8">
+      <input type="Text" class="form-control" id="inputClientID" placeholder="MerchantID">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputSecret" class="col-sm-4 col-form-label">Secret</label>
+    <div class="col-sm-8">
+      <input type=" Secret " class="form-control" id="inputSecret" placeholder="MerchantID">
+    </div>
+  </div>
+                  <div class="col-md-4">
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
                             <h6 class="my-0">Payment Reference</h6>
@@ -98,18 +94,10 @@
                         <span class="text-muted" id="paymentRef"></span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between">
-                        <form>
-                          <div class="row">
-                            <div class="col">
-                              <input type="text" class="form-control" placeholder="Amount">
-                            </div>
-                            <div class="col">
-                              <input type="text" class="form-control" placeholder="Currency">
-                            </div>
-                          </div>
-                        </form>
-                      <div> 
-                       <li class="list-group-item d-flex justify-content-between">
+                        <span>Total (SGD)</span>
+                        <strong id="totalAmount">$0.02</strong>
+                    </li>
+                </ul>           
                 <button type="button" class="btn btn-success btn-lg btn-block" id="pay">Pay</button> 
             </div>
         </div>
