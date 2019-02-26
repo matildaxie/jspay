@@ -75,7 +75,7 @@
                 </ul>
             </div>
 	    <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-12">
                 <div class="alert alert-info" role="alert" id="loading">
                     Calculating payment... Please wait...
                 </div>
@@ -91,12 +91,12 @@
         RDP.modal.init('modal.css3.css');
         let el = id => { return document.getElementById(id) };
         el('paymentRef').innerText = "OID" + (new Date()).getTime();
-        RDP.auth('6jeincvnmi8hl0g9qaon3955un', 'dadem4qv49lts24v986f83h1kp4gbo7133cu2u40nlp5n80uvur')
+        RDP.auth('5j3b1f2mnj9thsqdscp3sqisim', '1ctvv656van7fi0u92ktadd5jb6svb3mhuttafrsnn1l9399poaf')
         .then(res => {
             RDP.pay(
                 res.accessToken,
                 el('paymentRef').innerText,
-                '23eae7e7-4c37-4413-b73d-f379d0269b43', 
+                '9bb3e21f-fedf-47c3-af01-031e3c2fb0ac', 
                 el('totalAmount').innerText.substring(1),
                 'SGD',
                 {}
