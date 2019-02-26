@@ -22,33 +22,33 @@
   </head>
   <body>
     <div class="container">
-      <div class="py-5 text-center">
-
-      </div>
+        <div class="py-5 text-center">
+            
+        </div>
         <div class="row">
-            <div class="col-md-4">
-                <dl class="list-group mb-3">
+            <div class="col-lg-4">
+               <dl class="list-group mb-3">
                   <dt>visa successful</dt>
-                       <dd>4111 1111 1111 1111
-                       <dd>expiry date: any future date
+                       <dd>4111 1111 1111 1111 
+                       <dd>expiry date: any future date 
                        <dd>cvv: any 3 digits
                        </dd>
                   <br>
                   <dt>visa fail</dt>
                         <dd>4532 0818 6469 8195
-                              <dd>expiry date: any future date
+                              <dd>expiry date: any future date 
                        <dd>cvv: any 3 digits
                        </dd>
                   <br>
                     <dt>mastercard successful</dt>
                         <dd>5123 4567 8901 2346
-                            <dd>expiry date: any future date
+                            <dd>expiry date: any future date 
                        <dd>cvv: any 3 digits
                        </dd>
                   <br>
                     <dt>mastercard fail</dt>
                         <dd>5460 1798 6185 4077
-                            <dd>expiry date: any future date
+                            <dd>expiry date: any future date 
                        <dd>cvv: any 3 digits
                        </dd>
                   <br>
@@ -58,13 +58,13 @@
                              <dd>Payment Passcode: 111 111
                       </dd>
               </dl>
-                  </div>
+                <ul class="list-group mb-3">
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
                             <h6 class="my-0">Payment Reference</h6>
                             <small class="text-muted"></small>
                         </div>
-                        <span class="text-muted" id="paymentRef"></span>
+                        <span class="text-muted"><span id="paymentRef"></span></span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between">
                         <span>Total (SGD)</span>
@@ -72,13 +72,15 @@
                     </li>
                 </ul>
             </div>
-            <div class="row">
+
             <div class="col-lg-8">
                 <div class="alert alert-info" role="alert" id="loading">
                     Calculating payment... Please wait...
                 </div>
                 <iframe id="payframe" class="d-none"></iframe>
             </div>
+        </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
