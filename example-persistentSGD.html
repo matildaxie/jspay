@@ -75,17 +75,7 @@
 	                    </li>
 	                </ul>           
                 </ul>
-            
-                <form class="card p-2" style="margin-bottom:20px;">
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="promoCode" placeholder="Promo code">
-                        <div class="input-group-append">
-                            <button type="submit" class="btn btn-secondary">Redeem</button>
-                        </div>
-                    </div>
-                </form> 
             </div>
-
             <div class="col-lg-8">
                 <div class="alert alert-info" role="alert" id="loading">
                     Calculating payment... Please wait...
@@ -104,7 +94,7 @@
         RDP.modal.init('modal.css3.css');
         let el = id => { return document.getElementById(id) };
         el('paymentRef').innerText = "OID" + (new Date()).getTime();
-        RDP.auth(‘5j3b1f2mnj9thsqdscp3sqisim’, ‘1ctvv656van7fi0u92ktadd5jb6svb3mhuttafrsnn1l9399poaf’)
+        RDP.auth('5j3b1f2mnj9thsqdscp3sqisim','1ctvv656van7fi0u92ktadd5jb6svb3mhuttafrsnn1l9399poaf')
         .then(res => {
             RDP.pay(
                 res.accessToken,
