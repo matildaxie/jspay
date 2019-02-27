@@ -25,10 +25,11 @@
     </style>
   </head>
   <body>
-    <div class="container">      
-      <div class="py-5 text-center">
-        test
-      </div>
+<div class="container">      
+<div class="py-5 text-center">
+RDP Demo Page
+</div>
+
 <div class="row">
 <div class="col-md-4">	
 <dl class="list-group mb-3">
@@ -62,8 +63,10 @@
 <dd>Payment Passcode: 111 111
 </dd>
 </dl>
-	</div>
-<div class="col-">
+</div>
+
+ 
+<div class="col-md-4">
 <form>
 <div class="form-group row">
 <label for="inputmerchantID" class="col-md-4 col-form-label">Merchant ID</label>
@@ -85,38 +88,47 @@
 <input type="text" class="form-control" id="inputsecret">
 </div>
 </div>
-</form>
+
+<div class="form-group row">
+<label for="inputemail" class="col-md-4 col-form-label">Email</label>
 <div class="col-">
-<form>
-  <div class="row">
-    <div class="col">
-      <input type="text" class="form-control" id="inputtotalAmount" placeholder="Amount">
-
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" id="inputcurrency" placeholder="Currency">
-    </div>
-   
-  </div>
-  <br>
-<li class="list-group-item d-flex justify-content-between lh-condensed">
-                        	<div>
-                           <h6 class="my-0">Payment Reference</h6>
-                           <small class="text-muted"></small>
-                        	</div>
-                       	<span class="text-muted" id="paymentRef"></span>
-                    	</li>
-
-                    	<li class="list-group-item d-flex justify-content-between">
-                        	<span>Total (USD)</span>
-                        	<strong id="totalAmount">$0.02</strong>
-                    	</li>
-                	</ul>           
-<button type="button" class="btn btn-success btn-lg btn-block" id="pay">Pay</button> 
-           	</div>
-
-
+<input type="text" class="form-control" id="inputemail">
 </div>
+</div>
+</form>
+
+<form>
+<div class="row">
+<div class="col">
+<input type="text" class="form-control" id="inputtotalAmount" placeholder="Amount">
+</div>
+
+<div class="col">
+<input type="text" class="form-control" id="inputcurrency" placeholder="Currency">
+</div>
+			</div>
+</form>
+
+<br>
+<li class="list-group-item d-flex justify-content-between lh-condensed">
+<div>
+<h6 class="my-0">Payment Reference</h6><small class="text-muted"></small>
+</div>
+<span class="text-muted" id="paymentRef"></span>
+</li>
+
+<li class="list-group-item d-flex justify-content-between">
+<span>Total (USD)</span>
+<strong id="totalAmount">$0.02</strong>
+</li>
+</ul>          
+ 
+<button type="button" class="btn btn-success btn-lg btn-block" id="pay">Pay</button> 
+</div>
+</div>
+</div>
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
