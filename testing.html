@@ -63,7 +63,7 @@
 </dd>
 </dl>
 	</div>
-<div class="col-md-6">
+<div class="col-">
 <form>
 <div class="form-group row">
 <label for="inputmerchantID" class="col-md-4 col-form-label">Merchant ID</label>
@@ -86,23 +86,34 @@
 </div>
 </div>
 </form>
-<div class="col-md-12">
-
-  
-  <form>
-  <div class="form-row">
- <div class="col-md-4">
-      <input type="text" class="form-control" id="inputcurrency" placeholder="Currency">
-    </div>
+<div class="col-">
+<form>
+  <div class="row">
     <div class="col">
       <input type="text" class="form-control" id="inputtotalAmount" placeholder="Amount">
+
     </div>
+    <div class="col">
+      <input type="text" class="form-control" id="inputcurrency" placeholder="Currency">
     </div>
-</form>          
-               <br>
+   
+  </div>
+  <br>
+</form>
+
+<li class="list-group-item d-flex justify-content-between lh-condensed">
+                        	<div>
+                           <h6 class="my-0">Payment Reference</h6>
+                           <small class="text-muted"></small>
+                        	</div>
+                       	<span class="text-muted" id="paymentRef"></span>
+                    	</li>
+
+        
 <button type="button" class="btn btn-success btn-lg btn-block" id="pay">Pay</button> 
            	</div>
 </div>
+
 </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -125,7 +136,7 @@
                     el('paymentRef').innerText,
                     '7a0cb443-157d-440a-8219-017951e8cf7c', 
                     el('totalAmount').innerText.substring(1),
-                    'SGD',
+                    'USD',
                     {}
                 )
                 .catch(e => {
