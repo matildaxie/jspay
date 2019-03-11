@@ -46,60 +46,53 @@
 
 <body>
     <div class="container">
-        <div class="py-5 text-center">
-            <img class="d-block mx-auto mb-4" src="lorem-logo.png" alt="" height="72">
-            <p style="text-align:right">
-                <a class="btn btn-light" data-toggle="collapse" href="#config" role="button" aria-expanded="false"
-                    aria-controls="config">Configure</a>
-            </p>
-            <div class="collapse multi-collapse" id="config">
-                <div class="card">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Prerequisites:</h6>
-                        <p class="card-text">
-                            <ul>
-                                <li>The domain (<span id="domainName"></span>) should be added as part of your
-                                    merchant's CSP (Content Security Policy).</li>
-                                <li>The hosted page should be set to "Browser to server"</li>
-                                <li>The hosted page should be launched</li>
-                            </ul>
-                        </p>
-                        <form>
-                            <div class="form-row">
-                                <div class="col-lg">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Client Key" id="clientKey">
-                                    </div>
-                                </div>
-                                <div class="col-lg">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Client Secret" id="clientSercret">
-                                    </div>
+        <div class="py-5 ">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">Prerequisites:</h6>
+                    <p class="card-text">
+                        <ul>
+                            <li>The domain (<span id="domainName"></span>) should be added as part of your
+                                merchant's CSP (Content Security Policy).</li>
+                            <li>The hosted page should be set to "Browser to server"</li>
+                            <li>The hosted page should be launched</li>
+                        </ul>
+                    </p>
+                    <form>
+                        <div class="form-row">
+                            <div class="col-lg">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Client Key" id="clientKey">
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="col-md">
-                                    <input type="text" class="form-control" placeholder="Merchant" id="merchant">
+                            <div class="col-lg">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Client Secret" id="clientSercret">
                                 </div>
-                                <div class="col-md">
-                                    <div class="form-row align-items-center">
-                                        <div class="col-md">
-                                            <input type="text" class="form-control" placeholder="Currency" id="currency">
-                                        </div>
-                                        <div class="col-md">
-                                            <input type="text" class="form-control" placeholder="Amount" id="amount">
-                                        </div>
-                                        <div class="col-md">
-                                            <div class="custom-control custom-checkbox mr-sm-2">
-                                                <input class="custom-control-input" type="checkbox" value="" id="isProduction">
-                                                <label class="custom-control-label" for="isProduction">Production</label>
-                                            </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md">
+                                <input type="text" class="form-control" placeholder="Merchant" id="merchant">
+                            </div>
+                            <div class="col-md">
+                                <div class="form-row align-items-center">
+                                    <div class="col-md">
+                                        <input type="text" class="form-control" placeholder="Currency" id="currency">
+                                    </div>
+                                    <div class="col-md">
+                                        <input type="text" class="form-control" placeholder="Amount" id="amount">
+                                    </div>
+                                    <div class="col-md">
+                                        <div class="custom-control custom-checkbox mr-sm-2">
+                                            <input class="custom-control-input" type="checkbox" value="" id="isProduction">
+                                            <label class="custom-control-label" for="isProduction">Production</label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </form>
-                    </div>
+                        </div>
+                    </form>
                 </div>
             </div>
             <div class="container">
@@ -118,7 +111,7 @@
                             aria-selected="false">Alipay</a>
                     </li>
                 </ul>
-                <div class="tab-content" id="myTabContent">
+                <div class="tab-content text-center" id="myTabContent">
                     <div class="tab-pane fade show active" id="visa" role="tabpanel" aria-labelledby="visa-tab">
                         <table class="table table-striped">
                             <thead>
@@ -200,6 +193,12 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-lg-8">
+                        <div class="alert alert-info" role="alert" id="loading">
+                            Calculating payment... Please wait...
+                        </div>
+                        <iframe id="payframe" class="d-none"></iframe>
+                    </div>
                     <div class="col-lg-4">
 
                         <ul class="list-group mb-3">
@@ -217,12 +216,6 @@
                         </ul>
                     </div>
 
-                    <div class="col-lg-8">
-                        <div class="alert alert-info" role="alert" id="loading">
-                            Calculating payment... Please wait...
-                        </div>
-                        <iframe id="payframe" class="d-none"></iframe>
-                    </div>
                 </div>
             </div>
             <!-- Optional JavaScript -->
