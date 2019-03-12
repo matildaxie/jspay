@@ -35,10 +35,10 @@
 
 <body>
     <div class="container">
-        <div class="py-5 text-center">
+        <div class="pb-5">
             <img class="d-block mx-auto mb-4" src="lorem-logo.png" alt="" height="72">
-            <p style="text-align:right">
-                <a class="btn btn-light" data-toggle="collapse" href="#config" role="button" aria-expanded="false"
+            <p>
+                <a class="btn btn-info" data-toggle="collapse" href="#config" role="button" aria-expanded="false"
                     aria-controls="config">Configure</a>
             </p>
             <div class="collapse multi-collapse" id="config">
@@ -92,9 +92,110 @@
                 </div>
             </div>
         </div>
+
+
+
+        <h4>Card Info</h4>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="visa-tab" data-toggle="tab" href="#visa" role="tab" aria-controls="visa"
+                    aria-selected="true">Visa</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="mastercard-tab" data-toggle="tab" href="#mastercard" role="tab" aria-controls="mastercard"
+                    aria-selected="false">Mastercard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="alipay-tab" data-toggle="tab" href="#alipay" role="tab" aria-controls="alipay"
+                    aria-selected="false">Alipay</a>
+            </li>
+        </ul>
+        <div class="tab-content text-center" id="myTabContent">
+            <div class="tab-pane fade show active" id="visa" role="tabpanel" aria-labelledby="visa-tab">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Success</th>
+                            <th scope="col">Fail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Card Numbers:</th>
+                            <td onclick="copyFunc('visa-success')" id="visa-success">4111 1111 1111 1111</td>
+                            <td onclick="copyFunc('visa-fail')" id="visa-fail">4532 0818 6469 8195</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Expiry Date:</th>
+                            <td colspan="2">Any future date</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">CVV:</th>
+                            <td colspan="2">Any 3 digits</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="mastercard" role="tabpanel" aria-labelledby="mastercard-tab">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Success</th>
+                            <th scope="col">Fail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Card Numbers:</th>
+                            <td onclick="copyFunc('mastercard-success')" id="mastercard-success">5123 4567 8901
+                                2346
+                            </td>
+                            <td onclick="copyFunc('mastercard-fail')" id="mastercard-fail">5460 1798 6185 4077</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Expiry Date:</th>
+                            <td colspan="2">Any future date</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">CVV:</th>
+                            <td colspan="2">Any 3 digits</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="alipay" role="tabpanel" aria-labelledby="alipay-tab">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Account Information</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Email:</th>
+                            <td onclick="copyFunc('alipay-email')" id="alipay-email">alipaytest20091@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Login Passcode:</th>
+                            <td colspan="2">111 111</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Payment Passcode</th>
+                            <td colspan="2">111 111</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <h4 class="pt-3">Cart</h4>
         <div class="row">
             <div class="col-md-8">
-                <h4>Cart</h4>
                 <table class="table">
                     <thead>
                         <tr>
@@ -120,107 +221,11 @@
                     </tbody>
                 </table>
 
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="visa-tab" data-toggle="tab" href="#visa" role="tab"
-                            aria-controls="visa" aria-selected="true">Visa</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="mastercard-tab" data-toggle="tab" href="#mastercard" role="tab"
-                            aria-controls="mastercard" aria-selected="false">Mastercard</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="alipay-tab" data-toggle="tab" href="#alipay" role="tab" aria-controls="alipay"
-                            aria-selected="false">Alipay</a>
-                    </li>
-                </ul>
-                <div class="tab-content text-center" id="myTabContent">
-                    <div class="tab-pane fade show active" id="visa" role="tabpanel" aria-labelledby="visa-tab">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th scope="col"></th>
-                                    <th scope="col">Success</th>
-                                    <th scope="col">Fail</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">Card Numbers:</th>
-                                    <td onclick="copyFunc('visa-success')" id="visa-success">4111 1111 1111 1111</td>
-                                    <td onclick="copyFunc('visa-fail')" id="visa-fail">4532 0818 6469 8195</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Expiry Date:</th>
-                                    <td colspan="2">Any future date</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">CVV:</th>
-                                    <td colspan="2">Any 3 digits</td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="tab-pane fade" id="mastercard" role="tabpanel" aria-labelledby="mastercard-tab">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th scope="col"></th>
-                                    <th scope="col">Success</th>
-                                    <th scope="col">Fail</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">Card Numbers:</th>
-                                    <td onclick="copyFunc('mastercard-success')" id="mastercard-success">5123 4567 8901 2346
-                                    </td>
-                                    <td onclick="copyFunc('mastercard-fail')" id="mastercard-fail">5460 1798 6185 4077</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Expiry Date:</th>
-                                    <td colspan="2">Any future date</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">CVV:</th>
-                                    <td colspan="2">Any 3 digits</td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="tab-pane fade" id="alipay" role="tabpanel" aria-labelledby="alipay-tab">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th scope="col"></th>
-                                    <th scope="col">Account Information</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">Email:</th>
-                                    <td onclick="copyFunc('alipay-email')" id="alipay-email">alipaytest20091@gmail.com</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Login Passcode:</th>
-                                    <td colspan="2">111 111</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Payment Passcode</th>
-                                    <td colspan="2">111 111</td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
             </div>
+            <!-- End of col-md-8 -->
 
 
-
+            <!-- Start of col-md-4 -->
             <div class="col-md-4">
                 <ul class="list-group mb-3">
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
@@ -276,8 +281,13 @@
                 </form>
                 <hr class="mb-4" />
                 <button type="button" class="btn btn-success btn-lg btn-block" id="pay">Pay</button>
+
             </div>
+            <!-- End of col-md-4 -->
         </div>
+
+
+       
         <footer class="my-5 pt-5 text-muted text-center text-small">
             <p class="mb-1">&copy; 2017-2018 Company Name</p>
             <ul class="list-inline">
@@ -349,7 +359,7 @@
 
             //Create a textarea to allow population of text
             var ta = document.createElement('textarea');
-            ta.setAttribute('readonly','');
+            ta.setAttribute('readonly', '');
             ta.value = txt;
             document.body.appendChild(ta)
             ta.select()
